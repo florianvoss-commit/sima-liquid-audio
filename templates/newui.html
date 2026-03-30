@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SiMa.ai GenAI Demo</title>
+  <script src="static/socket.io.min.js"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='newui.css') }}">
+  <script src="/config.js"></script>
+</head>
+
+<body>
+
+  <!-- Main Dashboard Container -->
+  <div id="mainDashboard" class="dashboard">
+
+    <!-- Top Section -->
+    <div id="topSection" class="top-section">
+
+      <!-- Top Left: Branding -->
+      <div id="cameraSection" class="camera-section">
+        <img id="topCenterIcon" src="{{ url_for('static', filename='icons/logo.png') }}" alt="SiMa.ai Logo">
+        {% if model_name %}
+        <div class="model-name-pill camera-pill" title="Active model">{{ model_name }}</div>
+        {% endif %}
+      </div>
+
+      <!-- Top Right: Settings Panel -->
+      <div id="settingsSection" class="settings-section">
+        <div class="settings-header">
+          Settings
+          <button id="themeToggle" class="theme-toggle-button-header" title="Toggle Dark/Light Mode">
+            <span class="theme-icon" id="themeIcon">🌙</span>
+          </button>
+        </div>
+        <div class="settings-content">
+          <div class="settings-container-row">
+            <div class="settings-left-container">
+              <div class="setting-group-title">Conversation Settings</div>
+              <div class="setting-row">
+                <label class="setting-label">
+                  <input type="checkbox" id="toggleChatHistory">
+                  Include chat history
+                </label>
+              </div>
+              <div class="setting-row">
+                <label for="modeSelect" class="setting-label">Mode:</label>
+                <select id="modeSelect" class="setting-select">
+                  <option value="asr" selected>ASR</option>
+                  <option value="tts">TTS</option>
+                  <option value="interleaved">Interleaved (Speech2Speech)</option>
+                </select>
+              </div>
+              <div class="setting-row voice-language-group" id="voiceRow">
+                <label for="voiceSelect" class="setting-label">Voice:</label>
+                <select id="voiceSelect" class="setting-select">
+                  <option value="us_male">US Male</option>
+                  <option value="us_female">US Female</option>
+                  <option value="uk_male">UK Male</option>
+                  <option value="uk_female" selected>UK Female</option>
+                </select>
+              </div>
+              <div class="setting-row system-prompt-row">
+                <button id="systemPromptButton" class="setting-button system-prompt-button">Set System Prompt</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Middle Section: Metrics -->
+    <div id="metricsSection" class="metrics-section">
+      <div class="metric-item">
+        <div class="metric-value" id="transcribeTime">0s</div>
+        <div class="metric-label">Transcribe</div>
+      </div>
+      <div class="metric-item">
+        <div class="metric-value" id="firstTokenTime">0s</div>
+        <div class="metric-label">First Token</div>
+      </div>
+      <div class="metric-item">
+        <div class="metric-value" id="firstAudioTime">0s</div>
+        <div class="metric-label">First Audio</div>
+      </div>
+      <div class="metric-item">
+        <div class="metric-value" id="tpsValue">0</div>
+        <div class="metric-label">TPS</div>
+      </div>
+      <div class="metric-item">
+        <div class="metric-value" id="rtfValue">0</div>
+        <div class="metric-label">RTF</div>
+      </div>
+    </div>
+
+    <!-- Bottom Section: Chat Interface -->
+    <div id="chatSection" class="chat-section">
+
+      <!-- Chat Messages Area -->
+      <div id="chatMessages" class="chat-messages">
+        <!-- Messages will be dynamically added here -->
+      </div>
+
+      <!-- Overlay Buttons -->
+      <button id="newChatButton" class="chat-overlay-button chat-overlay-top-right" title="New Chat">
+        <img src="{{ url_for('static', filename='icons/refresh.png') }}" alt="New Chat" width="16" height="16">
+      </button>
+
+      <button id="abortButton" class="chat-overlay-button chat-overlay-bottom-right" title="Stop"
+        style="display: none;">
+        <img src="{{ url_for('static', filename='icons/cancel.png') }}" alt="Stop" width="16" height="16">
+      </button>
+
+      <!-- Chat Input Area -->
+      <div id="chatInput" class="chat-input">
+        <div class="input-container">
+          <input type="text" id="messageInput" class="message-input" placeholder="Type your message...">
+          <div class="input-buttons">
+            <button id="sendButton" class="input-button" title="Send">
+              <img src="{{ url_for('static', filename='icons/send.png') }}" alt="Send" width="24" height="24">
+            </button>
+            <button id="recordButton" class="input-button" title="Record Audio"
+              data-muted-url="{{ url_for('static', filename='icons/muted.png') }}"
+              data-active-url="{{ url_for('static', filename='icons/microphone.png') }}">
+              <img id="recordIcon" src="{{ url_for('static', filename='icons/muted.png') }}" alt="Record" width="24"
+                height="24">
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Audio Visualizer (hidden by default, shown during TTS) -->
+  <canvas id="audioVisualizer" width="320" height="320" style="display: none;"></canvas>
+
+  <div id="systemPromptModal" class="system-prompt-modal" style="display: none;">
+    <div class="system-prompt-modal-content">
+      <h3 class="system-prompt-title">System Prompt</h3>
+      <textarea id="systemPromptTextarea" class="system-prompt-textarea"
+        placeholder="Enter a system prompt or leave empty to clear it."></textarea>
+      <div id="systemPromptModalMessage" class="system-prompt-modal-message"></div>
+      <div class="system-prompt-actions">
+        <button id="systemPromptCancel" class="setting-button system-prompt-cancel">Cancel</button>
+        <button id="systemPromptSave" class="setting-button system-prompt-save">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='newui.js') }}"></script>
+  <script src="{{ url_for('static', filename='socket.io.min.js') }}"></script>
+</body>
+
+</html>

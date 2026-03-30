@@ -1,0 +1,918 @@
+[2026-03-30 17:45:38.391] [llima] [info] Loaded libMLArt.so: /home/sima/liquid_audio/apps-genai-demo/.venv/lib/python3.11/site-packages/sima_lmm/devkit/../lib/built_in_mla_rt/libMLArt.so
+[2026-03-30 17:45:38.391] [llima] [info] Connect MLA runtime with args: [libMLArt.so, --connect=mip, -B=block, -vqo=syslog, -t, -b=no]
+[2026-03-30 17:45:38.415] [VLM] [info] LiquidAudioModel initialize starting ...
+[2026-03-30 17:45:38.415] [VLM] [info] BASE initialize starting ...
+[2026-03-30 17:45:38.415] [VLM] [info] BASE initialize completed ...
+[2026-03-30 17:45:39.365] [VLM] [info] Audio encoder initialize starting ...
+[2026-03-30 17:45:39.365] [VLM] [info] BASE initialize starting ...
+[2026-03-30 17:45:39.365] [VLM] [info] BASE initialize completed ...
+[2026-03-30 17:45:39.365] [VLM] [info] Audio encoder initialize completed
+[2026-03-30 17:45:39.365] [VLM] [info] Liquid audio language model initialize starting ...
+[2026-03-30 17:45:39.365] [VLM] [info] BASE initialize starting ...
+[2026-03-30 17:45:39.367] [VLM] [info] BASE initialize completed ...
+[2026-03-30 17:45:40.816] [VLM] [info] Liquid audio language model initialize completed
+[2026-03-30 17:45:40.819] [VLM] [info] Depthformer initialize starting ...
+[2026-03-30 17:45:40.819] [VLM] [info] BASE initialize starting ...
+[2026-03-30 17:45:40.819] [VLM] [info] BASE initialize completed ...
+[2026-03-30 17:45:40.819] [VLM] [info] Depthformer initialize completed
+[2026-03-30 17:45:40.820] [VLM] [info] Audio detokenizer initialize starting ...
+[2026-03-30 17:45:40.820] [VLM] [info] BASE initialize starting ...
+[2026-03-30 17:45:40.820] [VLM] [info] BASE initialize completed ...
+[2026-03-30 17:45:40.838] [VLM] [info] Audio detokenizer initialize completed
+[2026-03-30 17:45:41.246] [llima] [info] Loading models in parallel with relative_dir = optional("/home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files")
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_audio_depthformer_core_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_audio_depthformer_head_cb0_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_audio_depthformer_head_cb1_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_audio_depthformer_head_cb2_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_audio_depthformer_head_cb3_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_audio_depthformer_head_cb4_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_audio_depthformer_head_cb5_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_audio_depthformer_head_cb6_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_audio_depthformer_head_cb7_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_audio_detokenizer_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_audio_encoder_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n128_cache_token0_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n128_cache_token1024_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n128_cache_token1152_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n128_cache_token1280_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n128_cache_token128_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n128_cache_token1408_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n128_cache_token1536_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n128_cache_token1664_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n128_cache_token1792_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n128_cache_token1920_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n128_cache_token256_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n128_cache_token384_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n128_cache_token512_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n128_cache_token640_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n128_cache_token768_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n128_cache_token896_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n128_layer0_conv_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n128_layer11_conv_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n128_layer13_conv_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n128_layer15_conv_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n128_layer1_conv_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n128_layer3_conv_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n128_layer4_conv_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n128_layer6_conv_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n128_layer7_conv_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n128_layer9_conv_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n128_post_layer10_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n128_post_layer12_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n128_post_layer14_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n128_post_layer2_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n128_post_layer5_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n128_post_layer8_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n128_pre_layer10_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n128_pre_layer12_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n128_pre_layer14_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n128_pre_layer2_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n128_pre_layer5_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n128_pre_layer8_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n1_cache_token1023_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n1_cache_token1151_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n1_cache_token1279_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n1_cache_token127_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n1_cache_token1407_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n1_cache_token1535_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n1_cache_token1663_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n1_cache_token1791_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n1_cache_token1919_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n1_cache_token2047_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n1_cache_token255_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n1_cache_token383_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n1_cache_token511_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n1_cache_token639_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n1_cache_token767_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n1_cache_token895_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n1_layer0_conv_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n1_layer11_conv_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n1_layer13_conv_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n1_layer15_conv_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n1_layer1_conv_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n1_layer3_conv_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n1_layer4_conv_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n1_layer6_conv_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n1_layer7_conv_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n1_layer9_conv_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n1_post_layer10_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n1_post_layer12_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n1_post_layer14_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n1_post_layer15_conv_final_audio_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n1_post_layer15_conv_final_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n1_post_layer2_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n1_post_layer5_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n1_post_layer8_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n1_pre_layer10_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n1_pre_layer12_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n1_pre_layer14_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n1_pre_layer2_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n1_pre_layer5_stage1_mla.elf
+[2026-03-30 17:45:46.506] [llima] [info] Loaded model: /home/sima/liquid_audio/LFM2.5-Audio-1.5B_compiled/elf_files/LFM2.5-Audio-1.5B_language_n1_pre_layer8_stage1_mla.elf
+[2026-03-30 17:45:46.683] [VLM] [info] Processing token no. 0-128
+[2026-03-30 17:45:46.711] [VLM] [info] Token step 0-128 generation_time=0.027569s
+[2026-03-30 17:45:46.711] [VLM] [info] Processing token no. 128-145
+[2026-03-30 17:45:46.740] [VLM] [info] Token step 128-145 generation_time=0.029691s
+[2026-03-30 17:45:46.740] [VLM] [info] Processing token no. 145-146
+[2026-03-30 17:45:46.753] [VLM] [info] Token step 145-146 generation_time=0.012797s
+[2026-03-30 17:45:46.753] [VLM] [info] Processing token no. 146-147
+[2026-03-30 17:45:46.766] [VLM] [info] Token step 146-147 generation_time=0.012695s
+[2026-03-30 17:45:46.766] [VLM] [info] Processing token no. 147-148
+[2026-03-30 17:45:46.779] [VLM] [info] Token step 147-148 generation_time=0.012645s
+[2026-03-30 17:45:46.779] [VLM] [info] Processing token no. 148-149
+[2026-03-30 17:45:46.791] [VLM] [info] Token step 148-149 generation_time=0.012659s
+[2026-03-30 17:45:46.791] [VLM] [info] Processing token no. 149-150
+[2026-03-30 17:45:46.804] [VLM] [info] Token step 149-150 generation_time=0.012634s
+[2026-03-30 17:45:46.804] [VLM] [info] Processing token no. 150-151
+[2026-03-30 17:45:46.817] [VLM] [info] Token step 150-151 generation_time=0.012610s
+[2026-03-30 17:45:46.817] [VLM] [info] Processing token no. 151-152
+[2026-03-30 17:45:46.829] [VLM] [info] Token step 151-152 generation_time=0.012631s
+[2026-03-30 17:45:46.829] [VLM] [info] LiquidAudioModel initialize completed
+[2026-03-30 17:45:46.829] [AudioWEB] [info] Starting the Audio HTTP server and listening on port 9998
+[2026-03-30 17:47:02.794] [AudioWEB] [info] Streaming request: id=audio-run-420140704446059 mode=asr
+[2026-03-30 17:47:02.866] [VLM] [info] Processing token no. 0-36
+[2026-03-30 17:47:02.895] [VLM] [info] Token step 0-36 generation_time=0.029520s
+[2026-03-30 17:47:02.896] [VLM] [info] Processing token no. 36-37
+[2026-03-30 17:47:02.909] [VLM] [info] Token step 36-37 generation_time=0.012732s
+[2026-03-30 17:47:02.909] [VLM] [info] Processing token no. 37-38
+[2026-03-30 17:47:02.922] [VLM] [info] Token step 37-38 generation_time=0.012591s
+[2026-03-30 17:47:02.922] [VLM] [info] Processing token no. 38-39
+[2026-03-30 17:47:02.935] [VLM] [info] Token step 38-39 generation_time=0.012525s
+[2026-03-30 17:47:02.935] [VLM] [info] Processing token no. 39-40
+[2026-03-30 17:47:02.947] [VLM] [info] Token step 39-40 generation_time=0.012501s
+[2026-03-30 17:47:02.948] [VLM] [info] Processing token no. 40-41
+[2026-03-30 17:47:02.960] [VLM] [info] Token step 40-41 generation_time=0.012491s
+[2026-03-30 17:47:02.960] [VLM] [info] Processing token no. 41-42
+[2026-03-30 17:47:02.973] [VLM] [info] Token step 41-42 generation_time=0.012515s
+[2026-03-30 17:47:12.954] [AudioWEB] [info] Streaming request: id=audio-run-420150865410563 mode=interleaved
+[2026-03-30 17:47:13.022] [VLM] [info] Processing token no. 0-37
+[2026-03-30 17:47:13.051] [VLM] [info] Token step 0-37 generation_time=0.029418s
+[2026-03-30 17:47:13.051] [VLM] [info] Processing token no. 37-38
+[2026-03-30 17:47:13.064] [VLM] [info] Token step 37-38 generation_time=0.012670s
+[2026-03-30 17:47:13.064] [VLM] [info] Processing token no. 38-39
+[2026-03-30 17:47:13.077] [VLM] [info] Token step 38-39 generation_time=0.012590s
+[2026-03-30 17:47:13.077] [VLM] [info] Processing token no. 39-40
+[2026-03-30 17:47:13.090] [VLM] [info] Token step 39-40 generation_time=0.012549s
+[2026-03-30 17:47:13.090] [VLM] [info] Processing token no. 40-41
+[2026-03-30 17:47:13.103] [VLM] [info] Token step 40-41 generation_time=0.012539s
+[2026-03-30 17:47:13.103] [VLM] [info] Processing token no. 41-42
+[2026-03-30 17:47:13.116] [VLM] [info] Token step 41-42 generation_time=0.012563s
+[2026-03-30 17:47:13.116] [VLM] [info] Processing token no. 42-43
+[2026-03-30 17:47:13.130] [VLM] [info] Token step 42-43 generation_time=0.013181s
+[2026-03-30 17:47:13.157] [VLM] [info] Processing token no. 43-44
+[2026-03-30 17:47:13.170] [VLM] [info] Token step 43-44 generation_time=0.013348s
+[2026-03-30 17:47:13.196] [VLM] [info] Processing token no. 44-45
+[2026-03-30 17:47:13.210] [VLM] [info] Token step 44-45 generation_time=0.013355s
+[2026-03-30 17:47:13.236] [VLM] [info] Processing token no. 45-46
+[2026-03-30 17:47:13.250] [VLM] [info] Token step 45-46 generation_time=0.013359s
+[2026-03-30 17:47:13.276] [VLM] [info] Processing token no. 46-47
+[2026-03-30 17:47:13.290] [VLM] [info] Token step 46-47 generation_time=0.013333s
+[2026-03-30 17:47:13.316] [VLM] [info] Processing token no. 47-48
+[2026-03-30 17:47:13.329] [VLM] [info] Token step 47-48 generation_time=0.013327s
+[2026-03-30 17:47:13.356] [VLM] [info] Processing token no. 48-49
+[2026-03-30 17:47:13.369] [VLM] [info] Token step 48-49 generation_time=0.013306s
+[2026-03-30 17:47:13.395] [VLM] [info] Processing token no. 49-50
+[2026-03-30 17:47:13.409] [VLM] [info] Token step 49-50 generation_time=0.013355s
+[2026-03-30 17:47:13.435] [VLM] [info] Processing token no. 50-51
+[2026-03-30 17:47:13.449] [VLM] [info] Token step 50-51 generation_time=0.013328s
+[2026-03-30 17:47:13.475] [VLM] [info] Processing token no. 51-52
+[2026-03-30 17:47:13.488] [VLM] [info] Token step 51-52 generation_time=0.013337s
+[2026-03-30 17:47:13.515] [VLM] [info] Processing token no. 52-53
+[2026-03-30 17:47:13.528] [VLM] [info] Token step 52-53 generation_time=0.013449s
+[2026-03-30 17:47:13.555] [VLM] [info] Processing token no. 53-54
+[2026-03-30 17:47:13.569] [VLM] [info] Token step 53-54 generation_time=0.013354s
+[2026-03-30 17:47:13.595] [VLM] [info] Processing token no. 54-55
+[2026-03-30 17:47:13.608] [VLM] [info] Token step 54-55 generation_time=0.013308s
+[2026-03-30 17:47:13.609] [VLM] [info] Processing token no. 55-56
+[2026-03-30 17:47:13.622] [VLM] [info] Token step 55-56 generation_time=0.012622s
+[2026-03-30 17:47:13.622] [VLM] [info] Processing token no. 56-57
+[2026-03-30 17:47:13.634] [VLM] [info] Token step 56-57 generation_time=0.012535s
+[2026-03-30 17:47:13.635] [VLM] [info] Processing token no. 57-58
+[2026-03-30 17:47:13.647] [VLM] [info] Token step 57-58 generation_time=0.012533s
+[2026-03-30 17:47:13.648] [VLM] [info] Processing token no. 58-59
+[2026-03-30 17:47:13.660] [VLM] [info] Token step 58-59 generation_time=0.012526s
+[2026-03-30 17:47:13.661] [VLM] [info] Processing token no. 59-60
+[2026-03-30 17:47:13.673] [VLM] [info] Token step 59-60 generation_time=0.012505s
+[2026-03-30 17:47:13.674] [VLM] [info] Processing token no. 60-61
+[2026-03-30 17:47:13.687] [VLM] [info] Token step 60-61 generation_time=0.013138s
+[2026-03-30 17:47:13.713] [VLM] [info] Processing token no. 61-62
+[2026-03-30 17:47:13.727] [VLM] [info] Token step 61-62 generation_time=0.013186s
+[2026-03-30 17:47:13.753] [VLM] [info] Processing token no. 62-63
+[2026-03-30 17:47:13.766] [VLM] [info] Token step 62-63 generation_time=0.013208s
+[2026-03-30 17:47:13.792] [VLM] [info] Processing token no. 63-64
+[2026-03-30 17:47:13.806] [VLM] [info] Token step 63-64 generation_time=0.013289s
+[2026-03-30 17:47:13.832] [VLM] [info] Processing token no. 64-65
+[2026-03-30 17:47:13.845] [VLM] [info] Token step 64-65 generation_time=0.013323s
+[2026-03-30 17:47:13.872] [VLM] [info] Processing token no. 65-66
+[2026-03-30 17:47:13.885] [VLM] [info] Token step 65-66 generation_time=0.013310s
+[2026-03-30 17:47:13.911] [VLM] [info] Processing token no. 66-67
+[2026-03-30 17:47:13.925] [VLM] [info] Token step 66-67 generation_time=0.013312s
+[2026-03-30 17:47:13.951] [VLM] [info] Processing token no. 67-68
+[2026-03-30 17:47:13.964] [VLM] [info] Token step 67-68 generation_time=0.013302s
+[2026-03-30 17:47:13.990] [VLM] [info] Processing token no. 68-69
+[2026-03-30 17:47:14.004] [VLM] [info] Token step 68-69 generation_time=0.013343s
+[2026-03-30 17:47:14.030] [VLM] [info] Processing token no. 69-70
+[2026-03-30 17:47:14.043] [VLM] [info] Token step 69-70 generation_time=0.013343s
+[2026-03-30 17:47:14.070] [VLM] [info] Processing token no. 70-71
+[2026-03-30 17:47:14.083] [VLM] [info] Token step 70-71 generation_time=0.013301s
+[2026-03-30 17:47:14.109] [VLM] [info] Processing token no. 71-72
+[2026-03-30 17:47:14.123] [VLM] [info] Token step 71-72 generation_time=0.013331s
+[2026-03-30 17:47:14.149] [VLM] [info] Processing token no. 72-73
+[2026-03-30 17:47:14.162] [VLM] [info] Token step 72-73 generation_time=0.013346s
+[2026-03-30 17:47:14.163] [VLM] [info] Processing token no. 73-74
+[2026-03-30 17:47:14.175] [VLM] [info] Token step 73-74 generation_time=0.012586s
+[2026-03-30 17:47:14.176] [VLM] [info] Processing token no. 74-75
+[2026-03-30 17:47:14.188] [VLM] [info] Token step 74-75 generation_time=0.012511s
+[2026-03-30 17:47:14.189] [VLM] [info] Processing token no. 75-76
+[2026-03-30 17:47:14.201] [VLM] [info] Token step 75-76 generation_time=0.012514s
+[2026-03-30 17:47:14.202] [VLM] [info] Processing token no. 76-77
+[2026-03-30 17:47:14.214] [VLM] [info] Token step 76-77 generation_time=0.012546s
+[2026-03-30 17:47:14.215] [VLM] [info] Processing token no. 77-78
+[2026-03-30 17:47:14.227] [VLM] [info] Token step 77-78 generation_time=0.012634s
+[2026-03-30 17:47:14.228] [VLM] [info] Processing token no. 78-79
+[2026-03-30 17:47:14.241] [VLM] [info] Token step 78-79 generation_time=0.013213s
+[2026-03-30 17:47:14.268] [VLM] [info] Processing token no. 79-80
+[2026-03-30 17:47:14.281] [VLM] [info] Token step 79-80 generation_time=0.013240s
+[2026-03-30 17:47:14.307] [VLM] [info] Processing token no. 80-81
+[2026-03-30 17:47:14.321] [VLM] [info] Token step 80-81 generation_time=0.013253s
+[2026-03-30 17:47:14.347] [VLM] [info] Processing token no. 81-82
+[2026-03-30 17:47:14.360] [VLM] [info] Token step 81-82 generation_time=0.013295s
+[2026-03-30 17:47:14.386] [VLM] [info] Processing token no. 82-83
+[2026-03-30 17:47:14.400] [VLM] [info] Token step 82-83 generation_time=0.013301s
+[2026-03-30 17:47:14.426] [VLM] [info] Processing token no. 83-84
+[2026-03-30 17:47:14.440] [VLM] [info] Token step 83-84 generation_time=0.013354s
+[2026-03-30 17:47:14.466] [VLM] [info] Processing token no. 84-85
+[2026-03-30 17:47:14.479] [VLM] [info] Token step 84-85 generation_time=0.013335s
+[2026-03-30 17:47:14.506] [VLM] [info] Processing token no. 85-86
+[2026-03-30 17:47:14.519] [VLM] [info] Token step 85-86 generation_time=0.013332s
+[2026-03-30 17:47:14.545] [VLM] [info] Processing token no. 86-87
+[2026-03-30 17:47:14.559] [VLM] [info] Token step 86-87 generation_time=0.013333s
+[2026-03-30 17:47:14.585] [VLM] [info] Processing token no. 87-88
+[2026-03-30 17:47:14.598] [VLM] [info] Token step 87-88 generation_time=0.013324s
+[2026-03-30 17:47:14.625] [VLM] [info] Processing token no. 88-89
+[2026-03-30 17:47:14.638] [VLM] [info] Token step 88-89 generation_time=0.013422s
+[2026-03-30 17:47:14.664] [VLM] [info] Processing token no. 89-90
+[2026-03-30 17:47:14.678] [VLM] [info] Token step 89-90 generation_time=0.013344s
+[2026-03-30 17:47:14.704] [VLM] [info] Processing token no. 90-91
+[2026-03-30 17:47:14.717] [VLM] [info] Token step 90-91 generation_time=0.013339s
+[2026-03-30 17:47:14.718] [VLM] [info] Processing token no. 91-92
+[2026-03-30 17:47:14.731] [VLM] [info] Token step 91-92 generation_time=0.012636s
+[2026-03-30 17:47:14.731] [VLM] [info] Processing token no. 92-93
+[2026-03-30 17:47:14.744] [VLM] [info] Token step 92-93 generation_time=0.012567s
+[2026-03-30 17:47:14.744] [VLM] [info] Processing token no. 93-94
+[2026-03-30 17:47:14.757] [VLM] [info] Token step 93-94 generation_time=0.012546s
+[2026-03-30 17:47:14.757] [VLM] [info] Processing token no. 94-95
+[2026-03-30 17:47:14.770] [VLM] [info] Token step 94-95 generation_time=0.012535s
+[2026-03-30 17:47:14.770] [VLM] [info] Processing token no. 95-96
+[2026-03-30 17:47:14.782] [VLM] [info] Token step 95-96 generation_time=0.012483s
+[2026-03-30 17:47:14.783] [VLM] [info] Processing token no. 96-97
+[2026-03-30 17:47:14.796] [VLM] [info] Token step 96-97 generation_time=0.013156s
+[2026-03-30 17:47:14.823] [VLM] [info] Processing token no. 97-98
+[2026-03-30 17:47:14.836] [VLM] [info] Token step 97-98 generation_time=0.013175s
+[2026-03-30 17:47:14.862] [VLM] [info] Processing token no. 98-99
+[2026-03-30 17:47:14.875] [VLM] [info] Token step 98-99 generation_time=0.013187s
+[2026-03-30 17:47:14.901] [VLM] [info] Processing token no. 99-100
+[2026-03-30 17:47:14.915] [VLM] [info] Token step 99-100 generation_time=0.013248s
+[2026-03-30 17:47:14.941] [VLM] [info] Processing token no. 100-101
+[2026-03-30 17:47:14.954] [VLM] [info] Token step 100-101 generation_time=0.013339s
+[2026-03-30 17:47:14.981] [VLM] [info] Processing token no. 101-102
+[2026-03-30 17:47:14.994] [VLM] [info] Token step 101-102 generation_time=0.013294s
+[2026-03-30 17:47:15.020] [VLM] [info] Processing token no. 102-103
+[2026-03-30 17:47:15.033] [VLM] [info] Token step 102-103 generation_time=0.013286s
+[2026-03-30 17:47:15.060] [VLM] [info] Processing token no. 103-104
+[2026-03-30 17:47:15.073] [VLM] [info] Token step 103-104 generation_time=0.013296s
+[2026-03-30 17:47:15.099] [VLM] [info] Processing token no. 104-105
+[2026-03-30 17:47:15.113] [VLM] [info] Token step 104-105 generation_time=0.013314s
+[2026-03-30 17:47:15.139] [VLM] [info] Processing token no. 105-106
+[2026-03-30 17:47:15.152] [VLM] [info] Token step 105-106 generation_time=0.013305s
+[2026-03-30 17:47:15.178] [VLM] [info] Processing token no. 106-107
+[2026-03-30 17:47:15.192] [VLM] [info] Token step 106-107 generation_time=0.013299s
+[2026-03-30 17:47:15.218] [VLM] [info] Processing token no. 107-108
+[2026-03-30 17:47:15.231] [VLM] [info] Token step 107-108 generation_time=0.013335s
+[2026-03-30 17:47:15.258] [VLM] [info] Processing token no. 108-109
+[2026-03-30 17:47:15.271] [VLM] [info] Token step 108-109 generation_time=0.013304s
+[2026-03-30 17:47:15.272] [VLM] [info] Processing token no. 109-110
+[2026-03-30 17:47:15.284] [VLM] [info] Token step 109-110 generation_time=0.012591s
+[2026-03-30 17:47:15.285] [VLM] [info] Processing token no. 110-111
+[2026-03-30 17:47:15.297] [VLM] [info] Token step 110-111 generation_time=0.012544s
+[2026-03-30 17:47:15.298] [VLM] [info] Processing token no. 111-112
+[2026-03-30 17:47:15.310] [VLM] [info] Token step 111-112 generation_time=0.012504s
+[2026-03-30 17:47:15.311] [VLM] [info] Processing token no. 112-113
+[2026-03-30 17:47:15.323] [VLM] [info] Token step 112-113 generation_time=0.012509s
+[2026-03-30 17:47:15.323] [VLM] [info] Processing token no. 113-114
+[2026-03-30 17:47:15.336] [VLM] [info] Token step 113-114 generation_time=0.012500s
+[2026-03-30 17:47:15.337] [VLM] [info] Processing token no. 114-115
+[2026-03-30 17:47:15.350] [VLM] [info] Token step 114-115 generation_time=0.013148s
+[2026-03-30 17:47:15.376] [VLM] [info] Processing token no. 115-116
+[2026-03-30 17:47:15.389] [VLM] [info] Token step 115-116 generation_time=0.013226s
+[2026-03-30 17:47:15.416] [VLM] [info] Processing token no. 116-117
+[2026-03-30 17:47:15.429] [VLM] [info] Token step 116-117 generation_time=0.013272s
+[2026-03-30 17:47:15.455] [VLM] [info] Processing token no. 117-118
+[2026-03-30 17:47:15.469] [VLM] [info] Token step 117-118 generation_time=0.013353s
+[2026-03-30 17:47:15.495] [VLM] [info] Processing token no. 118-119
+[2026-03-30 17:47:15.508] [VLM] [info] Token step 118-119 generation_time=0.013316s
+[2026-03-30 17:47:15.535] [VLM] [info] Processing token no. 119-120
+[2026-03-30 17:47:15.548] [VLM] [info] Token step 119-120 generation_time=0.013304s
+[2026-03-30 17:47:15.574] [VLM] [info] Processing token no. 120-121
+[2026-03-30 17:47:15.588] [VLM] [info] Token step 120-121 generation_time=0.013302s
+[2026-03-30 17:47:15.614] [VLM] [info] Processing token no. 121-122
+[2026-03-30 17:47:15.627] [VLM] [info] Token step 121-122 generation_time=0.013299s
+[2026-03-30 17:47:15.653] [VLM] [info] Processing token no. 122-123
+[2026-03-30 17:47:15.667] [VLM] [info] Token step 122-123 generation_time=0.013307s
+[2026-03-30 17:47:15.693] [VLM] [info] Processing token no. 123-124
+[2026-03-30 17:47:15.707] [VLM] [info] Token step 123-124 generation_time=0.013354s
+[2026-03-30 17:47:15.733] [VLM] [info] Processing token no. 124-125
+[2026-03-30 17:47:15.746] [VLM] [info] Token step 124-125 generation_time=0.013341s
+[2026-03-30 17:47:15.772] [VLM] [info] Processing token no. 125-126
+[2026-03-30 17:47:15.786] [VLM] [info] Token step 125-126 generation_time=0.013307s
+[2026-03-30 17:47:15.812] [VLM] [info] Processing token no. 126-127
+[2026-03-30 17:47:15.825] [VLM] [info] Token step 126-127 generation_time=0.013339s
+[2026-03-30 17:47:15.826] [VLM] [info] Processing token no. 127-128
+[2026-03-30 17:47:15.839] [VLM] [info] Token step 127-128 generation_time=0.012618s
+[2026-03-30 17:47:15.839] [VLM] [info] Processing token no. 128-129
+[2026-03-30 17:47:15.852] [VLM] [info] Token step 128-129 generation_time=0.012764s
+[2026-03-30 17:47:15.853] [VLM] [info] Processing token no. 129-130
+[2026-03-30 17:47:15.866] [VLM] [info] Token step 129-130 generation_time=0.013412s
+[2026-03-30 17:47:15.892] [VLM] [info] Processing token no. 130-131
+[2026-03-30 17:47:15.906] [VLM] [info] Token step 130-131 generation_time=0.013459s
+[2026-03-30 17:47:15.932] [VLM] [info] Processing token no. 131-132
+[2026-03-30 17:47:15.946] [VLM] [info] Token step 131-132 generation_time=0.013503s
+[2026-03-30 17:47:15.972] [VLM] [info] Processing token no. 132-133
+[2026-03-30 17:47:15.986] [VLM] [info] Token step 132-133 generation_time=0.013501s
+[2026-03-30 17:47:16.012] [VLM] [info] Processing token no. 133-134
+[2026-03-30 17:47:16.025] [VLM] [info] Token step 133-134 generation_time=0.013476s
+[2026-03-30 17:47:16.052] [VLM] [info] Processing token no. 134-135
+[2026-03-30 17:47:16.065] [VLM] [info] Token step 134-135 generation_time=0.013456s
+[2026-03-30 17:47:16.091] [VLM] [info] Processing token no. 135-136
+[2026-03-30 17:47:16.105] [VLM] [info] Token step 135-136 generation_time=0.013464s
+[2026-03-30 17:47:16.131] [VLM] [info] Processing token no. 136-137
+[2026-03-30 17:47:16.144] [VLM] [info] Token step 136-137 generation_time=0.013463s
+[2026-03-30 17:47:16.171] [VLM] [info] Processing token no. 137-138
+[2026-03-30 17:47:16.184] [VLM] [info] Token step 137-138 generation_time=0.013505s
+[2026-03-30 17:47:16.211] [VLM] [info] Processing token no. 138-139
+[2026-03-30 17:47:16.224] [VLM] [info] Token step 138-139 generation_time=0.013519s
+[2026-03-30 17:47:16.250] [VLM] [info] Processing token no. 139-140
+[2026-03-30 17:47:16.264] [VLM] [info] Token step 139-140 generation_time=0.013517s
+[2026-03-30 17:47:16.290] [VLM] [info] Processing token no. 140-141
+[2026-03-30 17:47:16.304] [VLM] [info] Token step 140-141 generation_time=0.013497s
+[2026-03-30 17:47:16.330] [VLM] [info] Processing token no. 141-142
+[2026-03-30 17:47:16.344] [VLM] [info] Token step 141-142 generation_time=0.013477s
+[2026-03-30 17:47:16.370] [VLM] [info] Processing token no. 142-143
+[2026-03-30 17:47:16.383] [VLM] [info] Token step 142-143 generation_time=0.013558s
+[2026-03-30 17:47:16.410] [VLM] [info] Processing token no. 143-144
+[2026-03-30 17:47:16.423] [VLM] [info] Token step 143-144 generation_time=0.013511s
+[2026-03-30 17:47:16.449] [VLM] [info] Processing token no. 144-145
+[2026-03-30 17:47:16.463] [VLM] [info] Token step 144-145 generation_time=0.013513s
+[2026-03-30 17:47:16.489] [VLM] [info] Processing token no. 145-146
+[2026-03-30 17:47:16.503] [VLM] [info] Token step 145-146 generation_time=0.013488s
+[2026-03-30 17:47:16.529] [VLM] [info] Processing token no. 146-147
+[2026-03-30 17:47:16.543] [VLM] [info] Token step 146-147 generation_time=0.013474s
+[2026-03-30 17:47:16.569] [VLM] [info] Processing token no. 147-148
+[2026-03-30 17:47:16.582] [VLM] [info] Token step 147-148 generation_time=0.013492s
+[2026-03-30 17:47:16.609] [VLM] [info] Processing token no. 148-149
+[2026-03-30 17:47:16.622] [VLM] [info] Token step 148-149 generation_time=0.013504s
+[2026-03-30 17:47:16.648] [VLM] [info] Processing token no. 149-150
+[2026-03-30 17:47:16.662] [VLM] [info] Token step 149-150 generation_time=0.013479s
+[2026-03-30 17:47:16.688] [VLM] [info] Processing token no. 150-151
+[2026-03-30 17:47:16.702] [VLM] [info] Token step 150-151 generation_time=0.013474s
+[2026-03-30 17:47:16.728] [VLM] [info] Processing token no. 151-152
+[2026-03-30 17:47:16.742] [VLM] [info] Token step 151-152 generation_time=0.013498s
+[2026-03-30 17:47:16.768] [VLM] [info] Processing token no. 152-153
+[2026-03-30 17:47:16.781] [VLM] [info] Token step 152-153 generation_time=0.013539s
+[2026-03-30 17:47:16.808] [VLM] [info] Processing token no. 153-154
+[2026-03-30 17:47:16.821] [VLM] [info] Token step 153-154 generation_time=0.013496s
+[2026-03-30 17:47:16.848] [VLM] [info] Processing token no. 154-155
+[2026-03-30 17:47:16.861] [VLM] [info] Token step 154-155 generation_time=0.013507s
+[2026-03-30 17:47:16.887] [VLM] [info] Processing token no. 155-156
+[2026-03-30 17:47:16.901] [VLM] [info] Token step 155-156 generation_time=0.013469s
+[2026-03-30 17:47:16.928] [VLM] [info] Processing token no. 156-157
+[2026-03-30 17:47:16.941] [VLM] [info] Token step 156-157 generation_time=0.013606s
+[2026-03-30 17:47:16.968] [VLM] [info] Processing token no. 157-158
+[2026-03-30 17:47:16.981] [VLM] [info] Token step 157-158 generation_time=0.013545s
+[2026-03-30 17:47:17.008] [VLM] [info] Processing token no. 158-159
+[2026-03-30 17:47:17.021] [VLM] [info] Token step 158-159 generation_time=0.013540s
+[2026-03-30 17:47:17.048] [VLM] [info] Processing token no. 159-160
+[2026-03-30 17:47:17.061] [VLM] [info] Token step 159-160 generation_time=0.013598s
+[2026-03-30 17:47:17.088] [VLM] [info] Processing token no. 160-161
+[2026-03-30 17:47:17.102] [VLM] [info] Token step 160-161 generation_time=0.013752s
+[2026-03-30 17:47:17.128] [VLM] [info] Processing token no. 161-162
+[2026-03-30 17:47:17.142] [VLM] [info] Token step 161-162 generation_time=0.013522s
+[2026-03-30 17:47:17.168] [VLM] [info] Processing token no. 162-163
+[2026-03-30 17:47:17.182] [VLM] [info] Token step 162-163 generation_time=0.013544s
+[2026-03-30 17:47:17.208] [VLM] [info] Processing token no. 163-164
+[2026-03-30 17:47:17.222] [VLM] [info] Token step 163-164 generation_time=0.013490s
+[2026-03-30 17:47:17.248] [VLM] [info] Processing token no. 164-165
+[2026-03-30 17:47:17.262] [VLM] [info] Token step 164-165 generation_time=0.013470s
+[2026-03-30 17:47:17.288] [VLM] [info] Processing token no. 165-166
+[2026-03-30 17:47:17.301] [VLM] [info] Token step 165-166 generation_time=0.013466s
+[2026-03-30 17:47:17.328] [VLM] [info] Processing token no. 166-167
+[2026-03-30 17:47:17.341] [VLM] [info] Token step 166-167 generation_time=0.013469s
+[2026-03-30 17:47:17.367] [VLM] [info] Processing token no. 167-168
+[2026-03-30 17:47:17.381] [VLM] [info] Token step 167-168 generation_time=0.013489s
+[2026-03-30 17:47:17.407] [VLM] [info] Processing token no. 168-169
+[2026-03-30 17:47:17.421] [VLM] [info] Token step 168-169 generation_time=0.013574s
+[2026-03-30 17:47:17.447] [VLM] [info] Processing token no. 169-170
+[2026-03-30 17:47:17.461] [VLM] [info] Token step 169-170 generation_time=0.013552s
+[2026-03-30 17:47:17.488] [VLM] [info] Processing token no. 170-171
+[2026-03-30 17:47:17.501] [VLM] [info] Token step 170-171 generation_time=0.013554s
+[2026-03-30 17:47:17.528] [VLM] [info] Processing token no. 171-172
+[2026-03-30 17:47:17.541] [VLM] [info] Token step 171-172 generation_time=0.013524s
+[2026-03-30 17:47:17.567] [VLM] [info] Processing token no. 172-173
+[2026-03-30 17:47:17.581] [VLM] [info] Token step 172-173 generation_time=0.013526s
+[2026-03-30 17:47:17.607] [VLM] [info] Processing token no. 173-174
+[2026-03-30 17:47:17.621] [VLM] [info] Token step 173-174 generation_time=0.013489s
+[2026-03-30 17:47:17.647] [VLM] [info] Processing token no. 174-175
+[2026-03-30 17:47:17.661] [VLM] [info] Token step 174-175 generation_time=0.013462s
+[2026-03-30 17:47:17.687] [VLM] [info] Processing token no. 175-176
+[2026-03-30 17:47:17.700] [VLM] [info] Token step 175-176 generation_time=0.013443s
+[2026-03-30 17:47:17.726] [VLM] [info] Processing token no. 176-177
+[2026-03-30 17:47:17.740] [VLM] [info] Token step 176-177 generation_time=0.013492s
+[2026-03-30 17:47:17.766] [VLM] [info] Processing token no. 177-178
+[2026-03-30 17:47:17.780] [VLM] [info] Token step 177-178 generation_time=0.013506s
+[2026-03-30 17:47:17.806] [VLM] [info] Processing token no. 178-179
+[2026-03-30 17:47:17.820] [VLM] [info] Token step 178-179 generation_time=0.013524s
+[2026-03-30 17:47:17.846] [VLM] [info] Processing token no. 179-180
+[2026-03-30 17:47:17.859] [VLM] [info] Token step 179-180 generation_time=0.013504s
+[2026-03-30 17:47:17.886] [VLM] [info] Processing token no. 180-181
+[2026-03-30 17:47:17.899] [VLM] [info] Token step 180-181 generation_time=0.013501s
+[2026-03-30 17:47:17.926] [VLM] [info] Processing token no. 181-182
+[2026-03-30 17:47:17.939] [VLM] [info] Token step 181-182 generation_time=0.013510s
+[2026-03-30 17:47:17.965] [VLM] [info] Processing token no. 182-183
+[2026-03-30 17:47:17.979] [VLM] [info] Token step 182-183 generation_time=0.013500s
+[2026-03-30 17:47:18.005] [VLM] [info] Processing token no. 183-184
+[2026-03-30 17:47:18.019] [VLM] [info] Token step 183-184 generation_time=0.013490s
+[2026-03-30 17:47:18.045] [VLM] [info] Processing token no. 184-185
+[2026-03-30 17:47:18.058] [VLM] [info] Token step 184-185 generation_time=0.013526s
+[2026-03-30 17:47:18.084] [VLM] [info] Processing token no. 185-186
+[2026-03-30 17:47:18.097] [VLM] [info] Token step 185-186 generation_time=0.013491s
+[2026-03-30 17:47:18.098] [VLM] [info] Interleaved summary: decode_time=5.076340s generated_audio=9.200s
+[2026-03-30 17:47:24.048] [AudioWEB] [info] Streaming request: id=audio-run-420161959069555 mode=interleaved
+[2026-03-30 17:47:24.122] [VLM] [info] Processing token no. 0-43
+[2026-03-30 17:47:24.152] [VLM] [info] Token step 0-43 generation_time=0.029236s
+[2026-03-30 17:47:24.152] [VLM] [info] Processing token no. 43-44
+[2026-03-30 17:47:24.165] [VLM] [info] Token step 43-44 generation_time=0.012614s
+[2026-03-30 17:47:24.165] [VLM] [info] Processing token no. 44-45
+[2026-03-30 17:47:24.178] [VLM] [info] Token step 44-45 generation_time=0.012448s
+[2026-03-30 17:47:24.178] [VLM] [info] Processing token no. 45-46
+[2026-03-30 17:47:24.190] [VLM] [info] Token step 45-46 generation_time=0.012489s
+[2026-03-30 17:47:24.191] [VLM] [info] Processing token no. 46-47
+[2026-03-30 17:47:24.203] [VLM] [info] Token step 46-47 generation_time=0.012480s
+[2026-03-30 17:47:24.203] [VLM] [info] Processing token no. 47-48
+[2026-03-30 17:47:24.216] [VLM] [info] Token step 47-48 generation_time=0.012444s
+[2026-03-30 17:47:24.216] [VLM] [info] Processing token no. 48-49
+[2026-03-30 17:47:24.230] [VLM] [info] Token step 48-49 generation_time=0.013117s
+[2026-03-30 17:47:24.256] [VLM] [info] Processing token no. 49-50
+[2026-03-30 17:47:24.269] [VLM] [info] Token step 49-50 generation_time=0.013182s
+[2026-03-30 17:47:24.295] [VLM] [info] Processing token no. 50-51
+[2026-03-30 17:47:24.308] [VLM] [info] Token step 50-51 generation_time=0.013252s
+[2026-03-30 17:47:24.334] [VLM] [info] Processing token no. 51-52
+[2026-03-30 17:47:24.348] [VLM] [info] Token step 51-52 generation_time=0.013268s
+[2026-03-30 17:47:24.374] [VLM] [info] Processing token no. 52-53
+[2026-03-30 17:47:24.387] [VLM] [info] Token step 52-53 generation_time=0.013272s
+[2026-03-30 17:47:24.413] [VLM] [info] Processing token no. 53-54
+[2026-03-30 17:47:24.427] [VLM] [info] Token step 53-54 generation_time=0.013338s
+[2026-03-30 17:47:24.453] [VLM] [info] Processing token no. 54-55
+[2026-03-30 17:47:24.466] [VLM] [info] Token step 54-55 generation_time=0.013293s
+[2026-03-30 17:47:24.492] [VLM] [info] Processing token no. 55-56
+[2026-03-30 17:47:24.506] [VLM] [info] Token step 55-56 generation_time=0.013283s
+[2026-03-30 17:47:24.532] [VLM] [info] Processing token no. 56-57
+[2026-03-30 17:47:24.545] [VLM] [info] Token step 56-57 generation_time=0.013286s
+[2026-03-30 17:47:24.571] [VLM] [info] Processing token no. 57-58
+[2026-03-30 17:47:24.585] [VLM] [info] Token step 57-58 generation_time=0.013337s
+[2026-03-30 17:47:24.611] [VLM] [info] Processing token no. 58-59
+[2026-03-30 17:47:24.624] [VLM] [info] Token step 58-59 generation_time=0.013363s
+[2026-03-30 17:47:24.651] [VLM] [info] Processing token no. 59-60
+[2026-03-30 17:47:24.664] [VLM] [info] Token step 59-60 generation_time=0.013336s
+[2026-03-30 17:47:24.690] [VLM] [info] Processing token no. 60-61
+[2026-03-30 17:47:24.703] [VLM] [info] Token step 60-61 generation_time=0.013319s
+[2026-03-30 17:47:24.704] [VLM] [info] Processing token no. 61-62
+[2026-03-30 17:47:24.716] [VLM] [info] Token step 61-62 generation_time=0.012555s
+[2026-03-30 17:47:24.717] [VLM] [info] Processing token no. 62-63
+[2026-03-30 17:47:24.729] [VLM] [info] Token step 62-63 generation_time=0.012468s
+[2026-03-30 17:47:24.730] [VLM] [info] Processing token no. 63-64
+[2026-03-30 17:47:24.742] [VLM] [info] Token step 63-64 generation_time=0.012457s
+[2026-03-30 17:47:24.742] [VLM] [info] Processing token no. 64-65
+[2026-03-30 17:47:24.755] [VLM] [info] Token step 64-65 generation_time=0.012458s
+[2026-03-30 17:47:24.755] [VLM] [info] Processing token no. 65-66
+[2026-03-30 17:47:24.768] [VLM] [info] Token step 65-66 generation_time=0.012489s
+[2026-03-30 17:47:24.768] [VLM] [info] Processing token no. 66-67
+[2026-03-30 17:47:24.781] [VLM] [info] Token step 66-67 generation_time=0.013122s
+[2026-03-30 17:47:24.808] [VLM] [info] Processing token no. 67-68
+[2026-03-30 17:47:24.821] [VLM] [info] Token step 67-68 generation_time=0.013263s
+[2026-03-30 17:47:24.847] [VLM] [info] Processing token no. 68-69
+[2026-03-30 17:47:24.860] [VLM] [info] Token step 68-69 generation_time=0.013287s
+[2026-03-30 17:47:24.887] [VLM] [info] Processing token no. 69-70
+[2026-03-30 17:47:24.900] [VLM] [info] Token step 69-70 generation_time=0.013313s
+[2026-03-30 17:47:24.926] [VLM] [info] Processing token no. 70-71
+[2026-03-30 17:47:24.939] [VLM] [info] Token step 70-71 generation_time=0.013302s
+[2026-03-30 17:47:24.966] [VLM] [info] Processing token no. 71-72
+[2026-03-30 17:47:24.979] [VLM] [info] Token step 71-72 generation_time=0.013280s
+[2026-03-30 17:47:25.005] [VLM] [info] Processing token no. 72-73
+[2026-03-30 17:47:25.018] [VLM] [info] Token step 72-73 generation_time=0.013257s
+[2026-03-30 17:47:25.045] [VLM] [info] Processing token no. 73-74
+[2026-03-30 17:47:25.058] [VLM] [info] Token step 73-74 generation_time=0.013260s
+[2026-03-30 17:47:25.084] [VLM] [info] Processing token no. 74-75
+[2026-03-30 17:47:25.097] [VLM] [info] Token step 74-75 generation_time=0.013236s
+[2026-03-30 17:47:25.123] [VLM] [info] Processing token no. 75-76
+[2026-03-30 17:47:25.137] [VLM] [info] Token step 75-76 generation_time=0.013288s
+[2026-03-30 17:47:25.163] [VLM] [info] Processing token no. 76-77
+[2026-03-30 17:47:25.176] [VLM] [info] Token step 76-77 generation_time=0.013289s
+[2026-03-30 17:47:25.202] [VLM] [info] Processing token no. 77-78
+[2026-03-30 17:47:25.216] [VLM] [info] Token step 77-78 generation_time=0.013281s
+[2026-03-30 17:47:25.242] [VLM] [info] Processing token no. 78-79
+[2026-03-30 17:47:25.255] [VLM] [info] Token step 78-79 generation_time=0.013269s
+[2026-03-30 17:47:25.256] [VLM] [info] Processing token no. 79-80
+[2026-03-30 17:47:25.268] [VLM] [info] Token step 79-80 generation_time=0.012464s
+[2026-03-30 17:47:25.268] [VLM] [info] Processing token no. 80-81
+[2026-03-30 17:47:25.281] [VLM] [info] Token step 80-81 generation_time=0.012446s
+[2026-03-30 17:47:25.281] [VLM] [info] Processing token no. 81-82
+[2026-03-30 17:47:25.294] [VLM] [info] Token step 81-82 generation_time=0.012506s
+[2026-03-30 17:47:25.294] [VLM] [info] Processing token no. 82-83
+[2026-03-30 17:47:25.306] [VLM] [info] Token step 82-83 generation_time=0.012460s
+[2026-03-30 17:47:25.307] [VLM] [info] Processing token no. 83-84
+[2026-03-30 17:47:25.319] [VLM] [info] Token step 83-84 generation_time=0.012466s
+[2026-03-30 17:47:25.320] [VLM] [info] Processing token no. 84-85
+[2026-03-30 17:47:25.333] [VLM] [info] Token step 84-85 generation_time=0.013184s
+[2026-03-30 17:47:25.359] [VLM] [info] Processing token no. 85-86
+[2026-03-30 17:47:25.373] [VLM] [info] Token step 85-86 generation_time=0.013291s
+[2026-03-30 17:47:25.399] [VLM] [info] Processing token no. 86-87
+[2026-03-30 17:47:25.412] [VLM] [info] Token step 86-87 generation_time=0.013348s
+[2026-03-30 17:47:25.438] [VLM] [info] Processing token no. 87-88
+[2026-03-30 17:47:25.452] [VLM] [info] Token step 87-88 generation_time=0.013327s
+[2026-03-30 17:47:25.478] [VLM] [info] Processing token no. 88-89
+[2026-03-30 17:47:25.491] [VLM] [info] Token step 88-89 generation_time=0.013284s
+[2026-03-30 17:47:25.517] [VLM] [info] Processing token no. 89-90
+[2026-03-30 17:47:25.531] [VLM] [info] Token step 89-90 generation_time=0.013269s
+[2026-03-30 17:47:25.557] [VLM] [info] Processing token no. 90-91
+[2026-03-30 17:47:25.570] [VLM] [info] Token step 90-91 generation_time=0.013306s
+[2026-03-30 17:47:25.597] [VLM] [info] Processing token no. 91-92
+[2026-03-30 17:47:25.610] [VLM] [info] Token step 91-92 generation_time=0.013330s
+[2026-03-30 17:47:25.636] [VLM] [info] Processing token no. 92-93
+[2026-03-30 17:47:25.650] [VLM] [info] Token step 92-93 generation_time=0.013343s
+[2026-03-30 17:47:25.676] [VLM] [info] Processing token no. 93-94
+[2026-03-30 17:47:25.689] [VLM] [info] Token step 93-94 generation_time=0.013320s
+[2026-03-30 17:47:25.715] [VLM] [info] Processing token no. 94-95
+[2026-03-30 17:47:25.729] [VLM] [info] Token step 94-95 generation_time=0.013298s
+[2026-03-30 17:47:25.755] [VLM] [info] Processing token no. 95-96
+[2026-03-30 17:47:25.768] [VLM] [info] Token step 95-96 generation_time=0.013292s
+[2026-03-30 17:47:25.794] [VLM] [info] Processing token no. 96-97
+[2026-03-30 17:47:25.808] [VLM] [info] Token step 96-97 generation_time=0.013291s
+[2026-03-30 17:47:25.808] [VLM] [info] Processing token no. 97-98
+[2026-03-30 17:47:25.821] [VLM] [info] Token step 97-98 generation_time=0.012616s
+[2026-03-30 17:47:25.821] [VLM] [info] Processing token no. 98-99
+[2026-03-30 17:47:25.834] [VLM] [info] Token step 98-99 generation_time=0.012499s
+[2026-03-30 17:47:25.834] [VLM] [info] Processing token no. 99-100
+[2026-03-30 17:47:25.846] [VLM] [info] Token step 99-100 generation_time=0.012471s
+[2026-03-30 17:47:25.847] [VLM] [info] Processing token no. 100-101
+[2026-03-30 17:47:25.859] [VLM] [info] Token step 100-101 generation_time=0.012444s
+[2026-03-30 17:47:25.860] [VLM] [info] Processing token no. 101-102
+[2026-03-30 17:47:25.872] [VLM] [info] Token step 101-102 generation_time=0.012436s
+[2026-03-30 17:47:25.873] [VLM] [info] Processing token no. 102-103
+[2026-03-30 17:47:25.886] [VLM] [info] Token step 102-103 generation_time=0.013100s
+[2026-03-30 17:47:25.912] [VLM] [info] Processing token no. 103-104
+[2026-03-30 17:47:25.925] [VLM] [info] Token step 103-104 generation_time=0.013183s
+[2026-03-30 17:47:25.951] [VLM] [info] Processing token no. 104-105
+[2026-03-30 17:47:25.964] [VLM] [info] Token step 104-105 generation_time=0.013200s
+[2026-03-30 17:47:25.991] [VLM] [info] Processing token no. 105-106
+[2026-03-30 17:47:26.004] [VLM] [info] Token step 105-106 generation_time=0.013221s
+[2026-03-30 17:47:26.030] [VLM] [info] Processing token no. 106-107
+[2026-03-30 17:47:26.043] [VLM] [info] Token step 106-107 generation_time=0.013209s
+[2026-03-30 17:47:26.069] [VLM] [info] Processing token no. 107-108
+[2026-03-30 17:47:26.083] [VLM] [info] Token step 107-108 generation_time=0.013277s
+[2026-03-30 17:47:26.109] [VLM] [info] Processing token no. 108-109
+[2026-03-30 17:47:26.122] [VLM] [info] Token step 108-109 generation_time=0.013269s
+[2026-03-30 17:47:26.148] [VLM] [info] Processing token no. 109-110
+[2026-03-30 17:47:26.162] [VLM] [info] Token step 109-110 generation_time=0.013247s
+[2026-03-30 17:47:26.188] [VLM] [info] Processing token no. 110-111
+[2026-03-30 17:47:26.201] [VLM] [info] Token step 110-111 generation_time=0.013244s
+[2026-03-30 17:47:26.227] [VLM] [info] Processing token no. 111-112
+[2026-03-30 17:47:26.241] [VLM] [info] Token step 111-112 generation_time=0.013432s
+[2026-03-30 17:47:26.267] [VLM] [info] Processing token no. 112-113
+[2026-03-30 17:47:26.281] [VLM] [info] Token step 112-113 generation_time=0.013394s
+[2026-03-30 17:47:26.307] [VLM] [info] Processing token no. 113-114
+[2026-03-30 17:47:26.320] [VLM] [info] Token step 113-114 generation_time=0.013409s
+[2026-03-30 17:47:26.347] [VLM] [info] Processing token no. 114-115
+[2026-03-30 17:47:26.360] [VLM] [info] Token step 114-115 generation_time=0.013358s
+[2026-03-30 17:47:26.361] [VLM] [info] Processing token no. 115-116
+[2026-03-30 17:47:26.373] [VLM] [info] Token step 115-116 generation_time=0.012652s
+[2026-03-30 17:47:26.374] [VLM] [info] Processing token no. 116-117
+[2026-03-30 17:47:26.386] [VLM] [info] Token step 116-117 generation_time=0.012660s
+[2026-03-30 17:47:26.387] [VLM] [info] Processing token no. 117-118
+[2026-03-30 17:47:26.400] [VLM] [info] Token step 117-118 generation_time=0.012690s
+[2026-03-30 17:47:26.400] [VLM] [info] Processing token no. 118-119
+[2026-03-30 17:47:26.413] [VLM] [info] Token step 118-119 generation_time=0.012738s
+[2026-03-30 17:47:26.413] [VLM] [info] Processing token no. 119-120
+[2026-03-30 17:47:26.426] [VLM] [info] Token step 119-120 generation_time=0.012650s
+[2026-03-30 17:47:26.427] [VLM] [info] Processing token no. 120-121
+[2026-03-30 17:47:26.440] [VLM] [info] Token step 120-121 generation_time=0.013210s
+[2026-03-30 17:47:26.466] [VLM] [info] Processing token no. 121-122
+[2026-03-30 17:47:26.480] [VLM] [info] Token step 121-122 generation_time=0.013444s
+[2026-03-30 17:47:26.506] [VLM] [info] Processing token no. 122-123
+[2026-03-30 17:47:26.519] [VLM] [info] Token step 122-123 generation_time=0.013329s
+[2026-03-30 17:47:26.546] [VLM] [info] Processing token no. 123-124
+[2026-03-30 17:47:26.559] [VLM] [info] Token step 123-124 generation_time=0.013340s
+[2026-03-30 17:47:26.585] [VLM] [info] Processing token no. 124-125
+[2026-03-30 17:47:26.598] [VLM] [info] Token step 124-125 generation_time=0.013290s
+[2026-03-30 17:47:26.625] [VLM] [info] Processing token no. 125-126
+[2026-03-30 17:47:26.638] [VLM] [info] Token step 125-126 generation_time=0.013328s
+[2026-03-30 17:47:26.664] [VLM] [info] Processing token no. 126-127
+[2026-03-30 17:47:26.678] [VLM] [info] Token step 126-127 generation_time=0.013291s
+[2026-03-30 17:47:26.704] [VLM] [info] Processing token no. 127-128
+[2026-03-30 17:47:26.717] [VLM] [info] Token step 127-128 generation_time=0.013295s
+[2026-03-30 17:47:26.743] [VLM] [info] Processing token no. 128-129
+[2026-03-30 17:47:26.757] [VLM] [info] Token step 128-129 generation_time=0.013475s
+[2026-03-30 17:47:26.783] [VLM] [info] Processing token no. 129-130
+[2026-03-30 17:47:26.797] [VLM] [info] Token step 129-130 generation_time=0.013475s
+[2026-03-30 17:47:26.823] [VLM] [info] Processing token no. 130-131
+[2026-03-30 17:47:26.836] [VLM] [info] Token step 130-131 generation_time=0.013524s
+[2026-03-30 17:47:26.862] [VLM] [info] Processing token no. 131-132
+[2026-03-30 17:47:26.876] [VLM] [info] Token step 131-132 generation_time=0.013517s
+[2026-03-30 17:47:26.902] [VLM] [info] Processing token no. 132-133
+[2026-03-30 17:47:26.916] [VLM] [info] Token step 132-133 generation_time=0.013484s
+[2026-03-30 17:47:26.916] [VLM] [info] Processing token no. 133-134
+[2026-03-30 17:47:26.929] [VLM] [info] Token step 133-134 generation_time=0.012703s
+[2026-03-30 17:47:26.929] [VLM] [info] Processing token no. 134-135
+[2026-03-30 17:47:26.943] [VLM] [info] Token step 134-135 generation_time=0.013302s
+[2026-03-30 17:47:26.969] [VLM] [info] Processing token no. 135-136
+[2026-03-30 17:47:26.982] [VLM] [info] Token step 135-136 generation_time=0.013396s
+[2026-03-30 17:47:27.009] [VLM] [info] Processing token no. 136-137
+[2026-03-30 17:47:27.022] [VLM] [info] Token step 136-137 generation_time=0.013379s
+[2026-03-30 17:47:27.048] [VLM] [info] Processing token no. 137-138
+[2026-03-30 17:47:27.062] [VLM] [info] Token step 137-138 generation_time=0.013426s
+[2026-03-30 17:47:27.088] [VLM] [info] Processing token no. 138-139
+[2026-03-30 17:47:27.101] [VLM] [info] Token step 138-139 generation_time=0.013503s
+[2026-03-30 17:47:27.127] [VLM] [info] Processing token no. 139-140
+[2026-03-30 17:47:27.141] [VLM] [info] Token step 139-140 generation_time=0.013463s
+[2026-03-30 17:47:27.167] [VLM] [info] Processing token no. 140-141
+[2026-03-30 17:47:27.181] [VLM] [info] Token step 140-141 generation_time=0.013446s
+[2026-03-30 17:47:27.207] [VLM] [info] Processing token no. 141-142
+[2026-03-30 17:47:27.220] [VLM] [info] Token step 141-142 generation_time=0.013487s
+[2026-03-30 17:47:27.246] [VLM] [info] Processing token no. 142-143
+[2026-03-30 17:47:27.260] [VLM] [info] Token step 142-143 generation_time=0.013433s
+[2026-03-30 17:47:27.286] [VLM] [info] Processing token no. 143-144
+[2026-03-30 17:47:27.300] [VLM] [info] Token step 143-144 generation_time=0.013462s
+[2026-03-30 17:47:27.326] [VLM] [info] Processing token no. 144-145
+[2026-03-30 17:47:27.339] [VLM] [info] Token step 144-145 generation_time=0.013511s
+[2026-03-30 17:47:27.366] [VLM] [info] Processing token no. 145-146
+[2026-03-30 17:47:27.379] [VLM] [info] Token step 145-146 generation_time=0.013533s
+[2026-03-30 17:47:27.405] [VLM] [info] Processing token no. 146-147
+[2026-03-30 17:47:27.419] [VLM] [info] Token step 146-147 generation_time=0.013569s
+[2026-03-30 17:47:27.445] [VLM] [info] Processing token no. 147-148
+[2026-03-30 17:47:27.459] [VLM] [info] Token step 147-148 generation_time=0.013521s
+[2026-03-30 17:47:27.485] [VLM] [info] Processing token no. 148-149
+[2026-03-30 17:47:27.499] [VLM] [info] Token step 148-149 generation_time=0.013725s
+[2026-03-30 17:47:27.518] [VLM] [info] Interleaved summary: decode_time=3.395660s generated_audio=5.920s
+[2026-03-30 17:47:33.600] [AudioWEB] [info] Streaming request: id=audio-run-420171510894967 mode=interleaved
+[2026-03-30 17:47:33.678] [VLM] [info] Processing token no. 0-46
+[2026-03-30 17:47:33.707] [VLM] [info] Token step 0-46 generation_time=0.029234s
+[2026-03-30 17:47:33.708] [VLM] [info] Processing token no. 46-47
+[2026-03-30 17:47:33.720] [VLM] [info] Token step 46-47 generation_time=0.012605s
+[2026-03-30 17:47:33.721] [VLM] [info] Processing token no. 47-48
+[2026-03-30 17:47:33.733] [VLM] [info] Token step 47-48 generation_time=0.012452s
+[2026-03-30 17:47:33.733] [VLM] [info] Processing token no. 48-49
+[2026-03-30 17:47:33.746] [VLM] [info] Token step 48-49 generation_time=0.012437s
+[2026-03-30 17:47:33.746] [VLM] [info] Processing token no. 49-50
+[2026-03-30 17:47:33.759] [VLM] [info] Token step 49-50 generation_time=0.012449s
+[2026-03-30 17:47:33.759] [VLM] [info] Processing token no. 50-51
+[2026-03-30 17:47:33.771] [VLM] [info] Token step 50-51 generation_time=0.012429s
+[2026-03-30 17:47:33.772] [VLM] [info] Processing token no. 51-52
+[2026-03-30 17:47:33.785] [VLM] [info] Token step 51-52 generation_time=0.013105s
+[2026-03-30 17:47:33.811] [VLM] [info] Processing token no. 52-53
+[2026-03-30 17:47:33.824] [VLM] [info] Token step 52-53 generation_time=0.013184s
+[2026-03-30 17:47:33.850] [VLM] [info] Processing token no. 53-54
+[2026-03-30 17:47:33.863] [VLM] [info] Token step 53-54 generation_time=0.013270s
+[2026-03-30 17:47:33.890] [VLM] [info] Processing token no. 54-55
+[2026-03-30 17:47:33.903] [VLM] [info] Token step 54-55 generation_time=0.013355s
+[2026-03-30 17:47:33.929] [VLM] [info] Processing token no. 55-56
+[2026-03-30 17:47:33.942] [VLM] [info] Token step 55-56 generation_time=0.013344s
+[2026-03-30 17:47:33.969] [VLM] [info] Processing token no. 56-57
+[2026-03-30 17:47:33.982] [VLM] [info] Token step 56-57 generation_time=0.013307s
+[2026-03-30 17:47:34.008] [VLM] [info] Processing token no. 57-58
+[2026-03-30 17:47:34.021] [VLM] [info] Token step 57-58 generation_time=0.013298s
+[2026-03-30 17:47:34.047] [VLM] [info] Processing token no. 58-59
+[2026-03-30 17:47:34.061] [VLM] [info] Token step 58-59 generation_time=0.013255s
+[2026-03-30 17:47:34.087] [VLM] [info] Processing token no. 59-60
+[2026-03-30 17:47:34.100] [VLM] [info] Token step 59-60 generation_time=0.013234s
+[2026-03-30 17:47:34.126] [VLM] [info] Processing token no. 60-61
+[2026-03-30 17:47:34.140] [VLM] [info] Token step 60-61 generation_time=0.013316s
+[2026-03-30 17:47:34.166] [VLM] [info] Processing token no. 61-62
+[2026-03-30 17:47:34.179] [VLM] [info] Token step 61-62 generation_time=0.013408s
+[2026-03-30 17:47:34.206] [VLM] [info] Processing token no. 62-63
+[2026-03-30 17:47:34.219] [VLM] [info] Token step 62-63 generation_time=0.013332s
+[2026-03-30 17:47:34.245] [VLM] [info] Processing token no. 63-64
+[2026-03-30 17:47:34.259] [VLM] [info] Token step 63-64 generation_time=0.013317s
+[2026-03-30 17:47:34.259] [VLM] [info] Processing token no. 64-65
+[2026-03-30 17:47:34.272] [VLM] [info] Token step 64-65 generation_time=0.012531s
+[2026-03-30 17:47:34.272] [VLM] [info] Processing token no. 65-66
+[2026-03-30 17:47:34.284] [VLM] [info] Token step 65-66 generation_time=0.012516s
+[2026-03-30 17:47:34.285] [VLM] [info] Processing token no. 66-67
+[2026-03-30 17:47:34.297] [VLM] [info] Token step 66-67 generation_time=0.012466s
+[2026-03-30 17:47:34.298] [VLM] [info] Processing token no. 67-68
+[2026-03-30 17:47:34.310] [VLM] [info] Token step 67-68 generation_time=0.012444s
+[2026-03-30 17:47:34.310] [VLM] [info] Processing token no. 68-69
+[2026-03-30 17:47:34.323] [VLM] [info] Token step 68-69 generation_time=0.012430s
+[2026-03-30 17:47:34.323] [VLM] [info] Processing token no. 69-70
+[2026-03-30 17:47:34.337] [VLM] [info] Token step 69-70 generation_time=0.013114s
+[2026-03-30 17:47:34.363] [VLM] [info] Processing token no. 70-71
+[2026-03-30 17:47:34.376] [VLM] [info] Token step 70-71 generation_time=0.013271s
+[2026-03-30 17:47:34.402] [VLM] [info] Processing token no. 71-72
+[2026-03-30 17:47:34.416] [VLM] [info] Token step 71-72 generation_time=0.013366s
+[2026-03-30 17:47:34.442] [VLM] [info] Processing token no. 72-73
+[2026-03-30 17:47:34.455] [VLM] [info] Token step 72-73 generation_time=0.013351s
+[2026-03-30 17:47:34.482] [VLM] [info] Processing token no. 73-74
+[2026-03-30 17:47:34.495] [VLM] [info] Token step 73-74 generation_time=0.013416s
+[2026-03-30 17:47:34.522] [VLM] [info] Processing token no. 74-75
+[2026-03-30 17:47:34.535] [VLM] [info] Token step 74-75 generation_time=0.013348s
+[2026-03-30 17:47:34.561] [VLM] [info] Processing token no. 75-76
+[2026-03-30 17:47:34.575] [VLM] [info] Token step 75-76 generation_time=0.013305s
+[2026-03-30 17:47:34.601] [VLM] [info] Processing token no. 76-77
+[2026-03-30 17:47:34.614] [VLM] [info] Token step 76-77 generation_time=0.013294s
+[2026-03-30 17:47:34.640] [VLM] [info] Processing token no. 77-78
+[2026-03-30 17:47:34.654] [VLM] [info] Token step 77-78 generation_time=0.013340s
+[2026-03-30 17:47:34.680] [VLM] [info] Processing token no. 78-79
+[2026-03-30 17:47:34.693] [VLM] [info] Token step 78-79 generation_time=0.013319s
+[2026-03-30 17:47:34.719] [VLM] [info] Processing token no. 79-80
+[2026-03-30 17:47:34.733] [VLM] [info] Token step 79-80 generation_time=0.013289s
+[2026-03-30 17:47:34.759] [VLM] [info] Processing token no. 80-81
+[2026-03-30 17:47:34.772] [VLM] [info] Token step 80-81 generation_time=0.013310s
+[2026-03-30 17:47:34.798] [VLM] [info] Processing token no. 81-82
+[2026-03-30 17:47:34.812] [VLM] [info] Token step 81-82 generation_time=0.013303s
+[2026-03-30 17:47:34.812] [VLM] [info] Processing token no. 82-83
+[2026-03-30 17:47:34.825] [VLM] [info] Token step 82-83 generation_time=0.012551s
+[2026-03-30 17:47:34.825] [VLM] [info] Processing token no. 83-84
+[2026-03-30 17:47:34.838] [VLM] [info] Token step 83-84 generation_time=0.012524s
+[2026-03-30 17:47:34.838] [VLM] [info] Processing token no. 84-85
+[2026-03-30 17:47:34.851] [VLM] [info] Token step 84-85 generation_time=0.012519s
+[2026-03-30 17:47:34.851] [VLM] [info] Processing token no. 85-86
+[2026-03-30 17:47:34.864] [VLM] [info] Token step 85-86 generation_time=0.012561s
+[2026-03-30 17:47:34.864] [VLM] [info] Processing token no. 86-87
+[2026-03-30 17:47:34.876] [VLM] [info] Token step 86-87 generation_time=0.012511s
+[2026-03-30 17:47:34.877] [VLM] [info] Processing token no. 87-88
+[2026-03-30 17:47:34.890] [VLM] [info] Token step 87-88 generation_time=0.013173s
+[2026-03-30 17:47:34.916] [VLM] [info] Processing token no. 88-89
+[2026-03-30 17:47:34.930] [VLM] [info] Token step 88-89 generation_time=0.013280s
+[2026-03-30 17:47:34.956] [VLM] [info] Processing token no. 89-90
+[2026-03-30 17:47:34.970] [VLM] [info] Token step 89-90 generation_time=0.013313s
+[2026-03-30 17:47:34.996] [VLM] [info] Processing token no. 90-91
+[2026-03-30 17:47:35.009] [VLM] [info] Token step 90-91 generation_time=0.013310s
+[2026-03-30 17:47:35.035] [VLM] [info] Processing token no. 91-92
+[2026-03-30 17:47:35.049] [VLM] [info] Token step 91-92 generation_time=0.013282s
+[2026-03-30 17:47:35.075] [VLM] [info] Processing token no. 92-93
+[2026-03-30 17:47:35.088] [VLM] [info] Token step 92-93 generation_time=0.013436s
+[2026-03-30 17:47:35.115] [VLM] [info] Processing token no. 93-94
+[2026-03-30 17:47:35.128] [VLM] [info] Token step 93-94 generation_time=0.013311s
+[2026-03-30 17:47:35.154] [VLM] [info] Processing token no. 94-95
+[2026-03-30 17:47:35.168] [VLM] [info] Token step 94-95 generation_time=0.013299s
+[2026-03-30 17:47:35.194] [VLM] [info] Processing token no. 95-96
+[2026-03-30 17:47:35.207] [VLM] [info] Token step 95-96 generation_time=0.013290s
+[2026-03-30 17:47:35.233] [VLM] [info] Processing token no. 96-97
+[2026-03-30 17:47:35.246] [VLM] [info] Token step 96-97 generation_time=0.013269s
+[2026-03-30 17:47:35.273] [VLM] [info] Processing token no. 97-98
+[2026-03-30 17:47:35.286] [VLM] [info] Token step 97-98 generation_time=0.013263s
+[2026-03-30 17:47:35.312] [VLM] [info] Processing token no. 98-99
+[2026-03-30 17:47:35.326] [VLM] [info] Token step 98-99 generation_time=0.013360s
+[2026-03-30 17:47:35.352] [VLM] [info] Processing token no. 99-100
+[2026-03-30 17:47:35.365] [VLM] [info] Token step 99-100 generation_time=0.013323s
+[2026-03-30 17:47:35.366] [VLM] [info] Processing token no. 100-101
+[2026-03-30 17:47:35.378] [VLM] [info] Token step 100-101 generation_time=0.012580s
+[2026-03-30 17:47:35.379] [VLM] [info] Processing token no. 101-102
+[2026-03-30 17:47:35.391] [VLM] [info] Token step 101-102 generation_time=0.012513s
+[2026-03-30 17:47:35.392] [VLM] [info] Processing token no. 102-103
+[2026-03-30 17:47:35.405] [VLM] [info] Token step 102-103 generation_time=0.013161s
+[2026-03-30 17:47:35.431] [VLM] [info] Processing token no. 103-104
+[2026-03-30 17:47:35.444] [VLM] [info] Token step 103-104 generation_time=0.013313s
+[2026-03-30 17:47:35.471] [VLM] [info] Processing token no. 104-105
+[2026-03-30 17:47:35.484] [VLM] [info] Token step 104-105 generation_time=0.013304s
+[2026-03-30 17:47:35.510] [VLM] [info] Processing token no. 105-106
+[2026-03-30 17:47:35.524] [VLM] [info] Token step 105-106 generation_time=0.013506s
+[2026-03-30 17:47:35.551] [VLM] [info] Processing token no. 106-107
+[2026-03-30 17:47:35.564] [VLM] [info] Token step 106-107 generation_time=0.013384s
+[2026-03-30 17:47:35.590] [VLM] [info] Processing token no. 107-108
+[2026-03-30 17:47:35.604] [VLM] [info] Token step 107-108 generation_time=0.013365s
+[2026-03-30 17:47:35.630] [VLM] [info] Processing token no. 108-109
+[2026-03-30 17:47:35.644] [VLM] [info] Token step 108-109 generation_time=0.013347s
+[2026-03-30 17:47:35.670] [VLM] [info] Processing token no. 109-110
+[2026-03-30 17:47:35.683] [VLM] [info] Token step 109-110 generation_time=0.013425s
+[2026-03-30 17:47:35.710] [VLM] [info] Processing token no. 110-111
+[2026-03-30 17:47:35.723] [VLM] [info] Token step 110-111 generation_time=0.013377s
+[2026-03-30 17:47:35.749] [VLM] [info] Processing token no. 111-112
+[2026-03-30 17:47:35.763] [VLM] [info] Token step 111-112 generation_time=0.013469s
+[2026-03-30 17:47:35.789] [VLM] [info] Processing token no. 112-113
+[2026-03-30 17:47:35.803] [VLM] [info] Token step 112-113 generation_time=0.013345s
+[2026-03-30 17:47:35.829] [VLM] [info] Processing token no. 113-114
+[2026-03-30 17:47:35.842] [VLM] [info] Token step 113-114 generation_time=0.013325s
+[2026-03-30 17:47:35.869] [VLM] [info] Processing token no. 114-115
+[2026-03-30 17:47:35.882] [VLM] [info] Token step 114-115 generation_time=0.013298s
+[2026-03-30 17:47:35.908] [VLM] [info] Processing token no. 115-116
+[2026-03-30 17:47:35.921] [VLM] [info] Token step 115-116 generation_time=0.013439s
+[2026-03-30 17:47:35.948] [VLM] [info] Processing token no. 116-117
+[2026-03-30 17:47:35.961] [VLM] [info] Token step 116-117 generation_time=0.013302s
+[2026-03-30 17:47:35.987] [VLM] [info] Processing token no. 117-118
+[2026-03-30 17:47:36.001] [VLM] [info] Token step 117-118 generation_time=0.013295s
+[2026-03-30 17:47:36.027] [VLM] [info] Processing token no. 118-119
+[2026-03-30 17:47:36.040] [VLM] [info] Token step 118-119 generation_time=0.013255s
+[2026-03-30 17:47:36.066] [VLM] [info] Processing token no. 119-120
+[2026-03-30 17:47:36.080] [VLM] [info] Token step 119-120 generation_time=0.013393s
+[2026-03-30 17:47:36.106] [VLM] [info] Processing token no. 120-121
+[2026-03-30 17:47:36.119] [VLM] [info] Token step 120-121 generation_time=0.013341s
+[2026-03-30 17:47:36.145] [VLM] [info] Processing token no. 121-122
+[2026-03-30 17:47:36.159] [VLM] [info] Token step 121-122 generation_time=0.013309s
+[2026-03-30 17:47:36.185] [VLM] [info] Processing token no. 122-123
+[2026-03-30 17:47:36.198] [VLM] [info] Token step 122-123 generation_time=0.013293s
+[2026-03-30 17:47:36.224] [VLM] [info] Processing token no. 123-124
+[2026-03-30 17:47:36.238] [VLM] [info] Token step 123-124 generation_time=0.013368s
+[2026-03-30 17:47:36.264] [VLM] [info] Processing token no. 124-125
+[2026-03-30 17:47:36.277] [VLM] [info] Token step 124-125 generation_time=0.013328s
+[2026-03-30 17:47:36.304] [VLM] [info] Processing token no. 125-126
+[2026-03-30 17:47:36.317] [VLM] [info] Token step 125-126 generation_time=0.013336s
+[2026-03-30 17:47:36.343] [VLM] [info] Processing token no. 126-127
+[2026-03-30 17:47:36.357] [VLM] [info] Token step 126-127 generation_time=0.013286s
+[2026-03-30 17:47:36.383] [VLM] [info] Processing token no. 127-128
+[2026-03-30 17:47:36.396] [VLM] [info] Token step 127-128 generation_time=0.013278s
+[2026-03-30 17:47:36.422] [VLM] [info] Processing token no. 128-129
+[2026-03-30 17:47:36.436] [VLM] [info] Token step 128-129 generation_time=0.013625s
+[2026-03-30 17:47:36.462] [VLM] [info] Processing token no. 129-130
+[2026-03-30 17:47:36.476] [VLM] [info] Token step 129-130 generation_time=0.013511s
+[2026-03-30 17:47:36.502] [VLM] [info] Processing token no. 130-131
+[2026-03-30 17:47:36.516] [VLM] [info] Token step 130-131 generation_time=0.013520s
+[2026-03-30 17:47:36.542] [VLM] [info] Processing token no. 131-132
+[2026-03-30 17:47:36.555] [VLM] [info] Token step 131-132 generation_time=0.013516s
+[2026-03-30 17:47:36.581] [VLM] [info] Processing token no. 132-133
+[2026-03-30 17:47:36.595] [VLM] [info] Token step 132-133 generation_time=0.013464s
+[2026-03-30 17:47:36.621] [VLM] [info] Processing token no. 133-134
+[2026-03-30 17:47:36.635] [VLM] [info] Token step 133-134 generation_time=0.013441s
+[2026-03-30 17:47:36.661] [VLM] [info] Processing token no. 134-135
+[2026-03-30 17:47:36.674] [VLM] [info] Token step 134-135 generation_time=0.013538s
+[2026-03-30 17:47:36.700] [VLM] [info] Processing token no. 135-136
+[2026-03-30 17:47:36.714] [VLM] [info] Token step 135-136 generation_time=0.013508s
+[2026-03-30 17:47:36.740] [VLM] [info] Processing token no. 136-137
+[2026-03-30 17:47:36.754] [VLM] [info] Token step 136-137 generation_time=0.013515s
+[2026-03-30 17:47:36.780] [VLM] [info] Processing token no. 137-138
+[2026-03-30 17:47:36.794] [VLM] [info] Token step 137-138 generation_time=0.013574s
+[2026-03-30 17:47:36.820] [VLM] [info] Processing token no. 138-139
+[2026-03-30 17:47:36.834] [VLM] [info] Token step 138-139 generation_time=0.013520s
+[2026-03-30 17:47:36.860] [VLM] [info] Processing token no. 139-140
+[2026-03-30 17:47:36.873] [VLM] [info] Token step 139-140 generation_time=0.013471s
+[2026-03-30 17:47:36.899] [VLM] [info] Processing token no. 140-141
+[2026-03-30 17:47:36.913] [VLM] [info] Token step 140-141 generation_time=0.013481s
+[2026-03-30 17:47:36.939] [VLM] [info] Processing token no. 141-142
+[2026-03-30 17:47:36.952] [VLM] [info] Token step 141-142 generation_time=0.013422s
+[2026-03-30 17:47:36.979] [VLM] [info] Processing token no. 142-143
+[2026-03-30 17:47:36.992] [VLM] [info] Token step 142-143 generation_time=0.013525s
+[2026-03-30 17:47:37.019] [VLM] [info] Processing token no. 143-144
+[2026-03-30 17:47:37.032] [VLM] [info] Token step 143-144 generation_time=0.013537s
+[2026-03-30 17:47:37.058] [VLM] [info] Processing token no. 144-145
+[2026-03-30 17:47:37.072] [VLM] [info] Token step 144-145 generation_time=0.013504s
+[2026-03-30 17:47:37.098] [VLM] [info] Processing token no. 145-146
+[2026-03-30 17:47:37.112] [VLM] [info] Token step 145-146 generation_time=0.013456s
+[2026-03-30 17:47:37.138] [VLM] [info] Processing token no. 146-147
+[2026-03-30 17:47:37.151] [VLM] [info] Token step 146-147 generation_time=0.013547s
+[2026-03-30 17:47:37.178] [VLM] [info] Processing token no. 147-148
+[2026-03-30 17:47:37.191] [VLM] [info] Token step 147-148 generation_time=0.013506s
+[2026-03-30 17:47:37.217] [VLM] [info] Processing token no. 148-149
+[2026-03-30 17:47:37.231] [VLM] [info] Token step 148-149 generation_time=0.013486s
+[2026-03-30 17:47:37.257] [VLM] [info] Processing token no. 149-150
+[2026-03-30 17:47:37.271] [VLM] [info] Token step 149-150 generation_time=0.013535s
+[2026-03-30 17:47:37.297] [VLM] [info] Processing token no. 150-151
+[2026-03-30 17:47:37.310] [VLM] [info] Token step 150-151 generation_time=0.013476s
+[2026-03-30 17:47:37.337] [VLM] [info] Processing token no. 151-152
+[2026-03-30 17:47:37.350] [VLM] [info] Token step 151-152 generation_time=0.013493s
+[2026-03-30 17:47:37.376] [VLM] [info] Processing token no. 152-153
+[2026-03-30 17:47:37.390] [VLM] [info] Token step 152-153 generation_time=0.013506s
+[2026-03-30 17:47:37.416] [VLM] [info] Processing token no. 153-154
+[2026-03-30 17:47:37.430] [VLM] [info] Token step 153-154 generation_time=0.013597s
+[2026-03-30 17:47:37.456] [VLM] [info] Processing token no. 154-155
+[2026-03-30 17:47:37.470] [VLM] [info] Token step 154-155 generation_time=0.013582s
+[2026-03-30 17:47:37.496] [VLM] [info] Processing token no. 155-156
+[2026-03-30 17:47:37.510] [VLM] [info] Token step 155-156 generation_time=0.013612s
+[2026-03-30 17:47:37.536] [VLM] [info] Processing token no. 156-157
+[2026-03-30 17:47:37.550] [VLM] [info] Token step 156-157 generation_time=0.013602s
+[2026-03-30 17:47:37.576] [VLM] [info] Processing token no. 157-158
+[2026-03-30 17:47:37.590] [VLM] [info] Token step 157-158 generation_time=0.013490s
+[2026-03-30 17:47:37.616] [VLM] [info] Processing token no. 158-159
+[2026-03-30 17:47:37.630] [VLM] [info] Token step 158-159 generation_time=0.013478s
+[2026-03-30 17:47:37.655] [VLM] [info] Processing token no. 159-160
+[2026-03-30 17:47:37.668] [VLM] [info] Token step 159-160 generation_time=0.013447s
+[2026-03-30 17:47:37.669] [VLM] [info] Interleaved summary: decode_time=3.990626s generated_audio=7.360s
+[2026-03-30 17:47:45.010] [AudioWEB] [info] Stopping Audio HTTP server.
+[2026-03-30 17:47:45.012] [AudioWEB] [info] Stopping Audio HTTP server.
+[2026-03-30 17:47:45.012] [VLM] [info] LiquidAudioModel finalize starting ...
+[2026-03-30 17:47:45.485] [VLM] [info] Audio detokenizer finalize starting ...
+[2026-03-30 17:47:45.485] [VLM] [info] BASE finalize starting ...
+[2026-03-30 17:47:45.485] [VLM] [info] BASE finalize completed
+[2026-03-30 17:47:45.485] [VLM] [info] Audio detokenizer finalize completed
+[2026-03-30 17:47:45.486] [VLM] [info] Depthformer finalize starting ...
+[2026-03-30 17:47:45.486] [VLM] [info] BASE finalize starting ...
+[2026-03-30 17:47:45.486] [VLM] [info] BASE finalize completed
+[2026-03-30 17:47:45.486] [VLM] [info] Depthformer finalize completed
+[2026-03-30 17:47:45.486] [VLM] [info] Liquid audio language model finalize starting ...
+[2026-03-30 17:47:45.832] [VLM] [info] BASE finalize starting ...
+[2026-03-30 17:47:45.836] [VLM] [info] BASE finalize completed
+[2026-03-30 17:47:45.836] [VLM] [info] Liquid audio language model finalize completed
+[2026-03-30 17:47:45.836] [VLM] [info] Audio encoder finalize starting ...
+[2026-03-30 17:47:45.836] [VLM] [info] BASE finalize starting ...
+[2026-03-30 17:47:45.836] [VLM] [info] BASE finalize completed
+[2026-03-30 17:47:45.836] [VLM] [info] Audio encoder finalize completed
+[2026-03-30 17:47:45.930] [VLM] [info] BASE finalize starting ...
+[2026-03-30 17:47:45.930] [VLM] [info] BASE finalize completed
+[2026-03-30 17:47:45.930] [VLM] [info] LiquidAudioModel finalize completed
