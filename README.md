@@ -183,6 +183,13 @@ This repo includes small example scripts for direct backend interaction:
 - [`examples/reset_history.py`](./examples/reset_history.py)
 - [`examples/stop.py`](./examples/stop.py)
 
+Supported TTS voices:
+
+- `uk_female`
+- `uk_male`
+- `us_female`
+- `us_male`
+
 Examples:
 
 ```bash
@@ -209,18 +216,4 @@ python examples/tts_request.py --board-ip 192.168.1.10 --input "Hello there" --v
 python examples/interleaved_request.py --board-ip 192.168.1.10 --audio-path /path/to/audio.wav
 python examples/reset_history.py --board-ip 192.168.1.10
 python examples/stop.py --board-ip 192.168.1.10
-```
-
-## Packaging
-
-To build a deployable archive:
-
-```bash
-./build-dist.sh
-```
-
-This generates:
-
-```text
-simaai-genai-demo.tar.gz
 ```
