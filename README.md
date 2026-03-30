@@ -1,21 +1,33 @@
 # SiMa Liquid Audio Demo
 
-This app is the browser/UI layer for the liquid-audio demo. It sits between the browser and the backend model server:
+This repo contains everything needed to run the SiMa liquid-audio model on SiMa Modalix.
 
-- browser <-> `app.py` via Flask + Socket.IO
-- `app.py` <-> `sima_lmm` backend via HTTP/SSE
+It includes:
 
-For audio modes, the backend is expected to expose the new `AudioWEB` endpoints:
+- the local web app
+- install and run scripts
+- example request scripts for direct backend usage
 
-- `POST /v1/audio/transcriptions`
-- `POST /v1/audio/speech`
-- `POST /v1/realtime`
-- `POST /stop`
-- `POST /reset_conversation`
+The app supports:
+
+- `ASR`
+- `TTS`
+- `Interleaved (Speech2Speech)`
+
+Runtime architecture:
+
+- browser <-> [`app.py`](./app.py) via Flask + Socket.IO
+- [`app.py`](./app.py) <-> `sima_lmm` backend via HTTP/SSE
 
 `app.py` consumes those SSE streams server-side and forwards the streamed text/audio updates to the browser over Socket.IO.
 
 ## Install
+
+To run this demo, you need these three things in one workspace folder:
+
+- this repo: `sima-liquid-audio/`
+- the `sima_lmm` wheel
+- the compiled model folder
 
 Recommended setup layout:
 
@@ -33,13 +45,13 @@ mkdir -p liquid_audio
 cd liquid_audio
 ```
 
-### 2. Clone this GitHub repo into it
+### 2. Clone this repo into it
 
 ```bash
 git clone git@github.com:florianvoss-commit/sima-liquid-audio.git
 ```
 
-### 3. Download the `sima_lmm` wheel into the parent `liquid_audio` folder
+### 3. Download the `sima_lmm` wheel into `liquid_audio/`
 
 Download the wheel from:
 
@@ -51,11 +63,7 @@ and place it here:
 liquid_audio/sima_lmm-2.1.0-cp311-cp311-linux_aarch64.whl
 ```
 
-### 4. Clone the Hugging Face compiled model repo into the same `liquid_audio` folder
-
-Clone:
-
-- `florianvoss/LFM2.5-Audio-1.5B_compiled`
+### 4. Clone the compiled model into `liquid_audio/`
 
 The compiled model should sit next to `sima-liquid-audio`, not inside it.
 
