@@ -202,9 +202,9 @@ class AppContext:
         return self.conversation_history.copy()
 
 
-    def update_settings(self, camidx, model_server_ip, ragserver, httponly, model_name=None, vision_image_size=None):
+    def update_settings(self, camidx, ragserver, httponly, model_name=None, vision_image_size=None):
         self.camidx = AppConstants.DEFAULT_CAMERA_IDX if camidx is None else camidx
-        self.model_server_ip = AppConstants.DEFAULT_SIMA_SERVER_IP if model_server_ip is None else model_server_ip
+        self.model_server_ip = AppConstants.DEFAULT_SIMA_SERVER_IP
         self.ragserver = ragserver
         self.httponly = httponly
         self.model_display_name = model_name or ""
@@ -1164,7 +1164,6 @@ if __name__ == '__main__':
     
     parser = argparse.ArgumentParser(description ='SiMa.ai GenAI demo application args')
     parser.add_argument('--camidx', type=int, required=False)
-    parser.add_argument('--ip', type=str, required=False)
     parser.add_argument('--ragserver', type=str, required=False)
     parser.add_argument('--httponly', action='store_true', help='Run app server in http only')
     parser.add_argument('--system-prompt-file', type=str, required=False, help='Provide a text file containing custom system prompt')
@@ -1196,7 +1195,6 @@ if __name__ == '__main__':
     vision_image_size = parse_vision_image_size(vision_image_size_arg)
     genai_app.update_settings(
         args.camidx,
-        args.ip,
         args.ragserver,
         args.httponly,
         config_model_name,
@@ -1215,7 +1213,7 @@ if __name__ == '__main__':
     genai_app.setup_router()
     cleanup()
     
-    logging.info(f'Connecting to SiMa.ai genai server with {args.camidx} {args.ip}')
+    logging.info(f'Connecting to SiMa.ai genai server with {args.camidx} {AppConstants.DEFAULT_SIMA_SERVER_IP}')
     server_thread = threading.Thread(target=start_http_server)
     server_thread.daemon = True
     server_thread.start()

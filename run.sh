@@ -15,16 +15,14 @@ Modes:
   --backend-only      Start only sima_lmm backend
 
 Options:
-  --backend-ip <IP:PORT>  Backend endpoint used by app.py (default: 127.0.0.1:9998)
   -h, --help              Show this help
 
 Environment overrides:
-  VENV_DIR, PYTHON_BIN, BACKEND_IP, LOG_FILE
+  LOG_FILE
 EOF
 }
 
 MODE="both"
-BACKEND_IP="${BACKEND_IP:-127.0.0.1:9998}"
 MODEL_PATH=""
 LOG_FILE="${LOG_FILE:-${SCRIPT_DIR}/console.log}"
 APP_ARGS=()
@@ -38,10 +36,6 @@ while [[ $# -gt 0 ]]; do
     --backend-only)
       MODE="backend"
       shift
-      ;;
-    --backend-ip)
-      BACKEND_IP="$2"
-      shift 2
       ;;
     -h|--help)
       usage
@@ -59,14 +53,14 @@ while [[ $# -gt 0 ]]; do
   esac
 done
 
-VENV_DIR="${VENV_DIR:-${SCRIPT_DIR}/.venv}"
+VENV_DIR="${SCRIPT_DIR}/.venv"
 if [[ ! -x "${VENV_DIR}/bin/python3" ]]; then
   echo "❌ Python virtual env not found at ${VENV_DIR}."
   echo "💡 Run ./install.sh first."
   exit 1
 fi
 
-PYTHON_BIN="${PYTHON_BIN:-${VENV_DIR}/bin/python3}"
+PYTHON_BIN="${VENV_DIR}/bin/python3"
 
 detect_model_path() {
   local search_roots=("${ROOT_DIR}" "${ROOT_DIR}/Compiled_Models")
@@ -148,9 +142,7 @@ ensure_sudo_ready() {
 }
 
 start_frontend() {
-  "${PYTHON_BIN}" app.py \
-    --ip "${BACKEND_IP}" \
-    "${APP_ARGS[@]}"
+  "${PYTHON_BIN}" app.py "${APP_ARGS[@]}"
 }
 
 if [[ "${MODE}" == "backend" ]]; then
@@ -160,7 +152,7 @@ if [[ "${MODE}" == "backend" ]]; then
 fi
 
 if [[ "${MODE}" == "frontend" ]]; then
-  exec "${PYTHON_BIN}" app.py --ip "${BACKEND_IP}" "${APP_ARGS[@]}"
+  exec "${PYTHON_BIN}" app.py "${APP_ARGS[@]}"
 fi
 
 echo "🚀 Starting backend (log: ${LOG_FILE})"
@@ -176,5 +168,5 @@ cleanup() {
 trap cleanup EXIT INT TERM
 
 sleep 2
-echo "🚀 Starting frontend against ${BACKEND_IP}"
-exec "${PYTHON_BIN}" app.py --ip "${BACKEND_IP}" "${APP_ARGS[@]}"
+echo "🚀 Starting frontend against local backend at 127.0.0.1:9998"
+exec "${PYTHON_BIN}" app.py "${APP_ARGS[@]}"

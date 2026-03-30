@@ -37,7 +37,6 @@ cd liquid_audio
 
 ```bash
 git clone git@github.com:florianvoss-commit/sima-liquid-audio.git
-cd sima-liquid-audio
 ```
 
 ### 3. Download the `sima_lmm` wheel into the parent `liquid_audio` folder
@@ -114,7 +113,6 @@ Modes:
   --backend-only      Start only sima_lmm backend
 
 Options:
-  --backend-ip <IP:PORT>  Backend endpoint used by app.py (default: 127.0.0.1:9998)
   -h, --help              Show this help
 ```
 
@@ -128,7 +126,8 @@ python -m sima_lmm.devkit.devkit_demo run <MODEL_PATH> --mode web
 ```
 
 - combined mode prompts for `sudo` first, then starts backend and frontend
-- `--frontend-only` does not require a local model checkout and can be used against an already running backend
+- `app.py` always talks to the local backend at `127.0.0.1:9998`
+- `--frontend-only` does not require a local model checkout and is useful if the backend is already running on the same device
 
 ## Typical Flows
 
@@ -141,7 +140,7 @@ Start backend + frontend:
 Start only frontend against an existing backend:
 
 ```bash
-./run.sh --frontend-only --backend-ip 127.0.0.1:9998
+./run.sh --frontend-only
 ```
 
 Start only backend:
@@ -179,10 +178,17 @@ For interleaved mode:
 This repo includes small example scripts for direct backend interaction:
 
 - [`examples/interleaved_request.py`](./examples/interleaved_request.py)
+- [`examples/asr_request.py`](./examples/asr_request.py)
+- [`examples/tts_request.py`](./examples/tts_request.py)
 - [`examples/reset_history.py`](./examples/reset_history.py)
 - [`examples/stop.py`](./examples/stop.py)
 
 Examples:
+
+```bash
+python examples/asr_request.py --audio-path /path/to/audio.wav
+python examples/tts_request.py --input "Hello there" --voice uk_female
+```
 
 ```bash
 python examples/interleaved_request.py --audio-path /path/to/audio.wav
@@ -193,6 +199,11 @@ python examples/stop.py
 ```
 
 Optional:
+
+```bash
+python examples/asr_request.py --board-ip 192.168.1.10 --audio-path /path/to/audio.wav
+python examples/tts_request.py --board-ip 192.168.1.10 --input "Hello there" --voice us_male
+```
 
 ```bash
 python examples/interleaved_request.py --board-ip 192.168.1.10 --audio-path /path/to/audio.wav
